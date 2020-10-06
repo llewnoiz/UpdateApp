@@ -1,0 +1,4 @@
+include ':app:mylibrary'
+include ':mylibrary2'
+include ':app'
+rootProject.name = "UpdateApp"
