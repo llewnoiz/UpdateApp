@@ -1,4 +1,4 @@
-package com.kaon.updateapp
+package com.krms.apkupdate
 
 import android.app.Service
 import android.content.BroadcastReceiver
@@ -6,7 +6,6 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.os.IBinder
-import android.util.JsonReader
 import com.kaonmedia.krmslibrary.IKrmsAidlInterface
 import okhttp3.Credentials
 import org.json.JSONObject
@@ -64,13 +63,18 @@ class UpdateService : Service() {
 
             var thread = Thread(object :Runnable{
                 override fun run() {
-                    val download = DownloadService(applicationContext)
+                    val download = DownloadService(
+                        applicationContext
+                    )
                     var credentials = Credentials.basic(user,password)
                     download.url = url
                     download.authenticator = credentials
                     download.run()
                     println("--------------- complete download -----------------------")
-                    var installer = InstallerService(applicationContext,download.downloadFile)
+                    var installer = InstallerService(
+                        applicationContext,
+                        download.downloadFile
+                    )
 
                     installer.runUpdate()
                 }

@@ -1,8 +1,6 @@
-package com.kaon.updateapp
+package com.krms.apkupdate
 
-import android.app.Service
 import android.content.Context
-import android.system.Os.chmod
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import java.io.File

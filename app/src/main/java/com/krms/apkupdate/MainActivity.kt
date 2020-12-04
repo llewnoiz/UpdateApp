@@ -1,7 +1,5 @@
-package com.kaon.updateapp
+package com.krms.apkupdate
 
-import android.content.Intent
-import android.content.IntentFilter
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 

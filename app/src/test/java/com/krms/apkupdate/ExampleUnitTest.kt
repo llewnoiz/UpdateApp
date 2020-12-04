@@ -1,4 +1,4 @@
-package com.kaon.updateapp
+package com.krms.apkupdate
 
 import org.junit.Test
 
